@@ -1,0 +1,33 @@
+#form-validate_incapacidad {
+    display: none;
+}
+#vista-comprobante {
+    overflow: auto;
+}
+#tabla-incapacidades_por_validar thead tr th {
+    font-size: 12px;
+    text-align: center;
+}
+#tabla-incapacidades_por_validar tbody tr td {
+    font-size: 12px;
+    text-align: center;
+}
+.img-preview {
+    height: auto;
+    width: 100%;
+}
+.obj-preview {
+    height: 100%;
+    width: 100%;
+}
+.td-actions {
+    cursor: pointer;
+}
+.left  {
+    border: solid 1px #f5f5f5;
+    border-radius: 10px;
+    height: 438px;
+}
+.jwt-alert {
+    margin-top: 10px;
+}

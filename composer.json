@@ -1,0 +1,16 @@
+{
+    "name": "julio_matadamas/sicoi",
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Julio Cesar Matadamas"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^6.3"
+    }
+}

@@ -1,0 +1,27 @@
+a {
+    align-items: center;
+    color: #212529;
+    display: flex;
+    font-size: .85rem;
+    justify-content: space-between;
+    margin: 10px auto;
+    max-width: 160px;
+    text-decoration: none;
+}
+a i {
+    font-size: 30px !important;
+    line-height: 40px;
+}
+.container-nueva_clave {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-nueva_clave .card {
+    margin: auto;
+    max-width: 580px;
+    width: 90%;
+}

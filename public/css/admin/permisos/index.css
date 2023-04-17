@@ -1,0 +1,20 @@
+#form-validate_permiso {
+    display: none;
+}
+#tabla-permisos_por_validar thead tr th {
+    font-size: 12px;
+    text-align: center;
+}
+#tabla-permisos_por_validar tbody tr td {
+    font-size: 12px;
+    text-align: center;
+}
+
+.card {
+    margin-bottom: 80px;
+}
+
+.td-actions {
+    cursor: pointer;
+}
+

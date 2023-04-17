@@ -1,0 +1,155 @@
+.arrow {
+    cursor: pointer;
+}
+.card-header h2 i {
+    cursor: pointer;
+    margin-right: 20px;
+}
+.close-btn {
+    color: #f5f5f5;
+    cursor: pointer;
+    font-size: 24px;
+    margin: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.side-bar {
+    background: #212529;
+    height: 100vh;
+    left: -300px;
+    position: fixed;
+    top: 0;
+    transition: 0.6s ease;
+    transition-property: left;
+    width: 300px;
+    z-index: 999;
+}
+.side-bar.active {
+    left: 0;
+}
+.side-bar header {
+    border-bottom: 1px solid #4d4d4d;
+    height: 70px;
+}
+.side-bar header h1 {
+    color: #f5f5f5;
+    font-size: 36px;
+    font-weight: 400;
+    margin-top: 10px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+
+.side-bar .nav-links {
+    height: calc(100vh - 160px);
+    overflow: auto;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.side-bar .nav-links::-webkit-scrollbar {
+    height: 8px;
+    width: 10px;
+}
+.side-bar .nav-links::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 4px;
+}
+.side-bar .nav-links li {
+    list-style: none;
+    position: relative;
+    transition: all 0.4s ease;
+}
+.side-bar .nav-links li:hover {
+    background: #1d1b31;
+}
+.side-bar .nav-links li a {
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+}
+.side-bar .nav-links li a .link-name {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+}
+.side-bar .nav-links li i {
+    color: #ffffff;
+    font-size: 16px;
+    height: 50px;
+    line-height: 50px;
+    min-width: 78px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.side-bar .nav-links li .icon-link {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.side-bar .nav-links li .sub-menu {
+    background: #1d1b31;
+    display: none;
+    margin-top: -10px;
+    padding: 6px 6px 14px 80px;
+}
+.side-bar .nav-links li.showSubMenu .sub-menu {
+    display: block;
+}
+.side-bar .nav-links li.showSubMenu .arrow {
+    transform: rotate(180deg);
+}
+.side-bar .nav-links li .sub-menu a {
+    color: #ffffff;
+    font-size: 14px;
+    opacity: 0.6;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+.side-bar .nav-links li .sub-menu a:hover {
+    opacity: 1;
+}
+.side-bar .profile-details {
+    align-items: center;
+    background: #1d1b31;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    position: fixed;
+    width: 300px;
+}
+.side-bar .profile-details img {
+    background: #1d1b31;
+    border: solid 1px #f5f5f5;
+    border-radius: 16px;
+    height: 60px;
+    margin: 0 14px 0 12px;
+    object-fit: cover;
+    padding: 5px;
+    width: 60px;
+}
+.side-bar .profile-details .name-job {
+    color: #ffffff;
+    max-width: 120px;
+    text-align: center;
+}
+.side-bar .profile-details .name-job .profile_name {
+    font-size: 14px;
+    font-weight: 500;
+}
+.side-bar .profile-details .name-job .job {
+    font-size: 10px;
+    font-weight: 600;
+}
+.side-bar .profile-details i {
+    align-items: center;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    font-size: 20px;
+    height: 60px;
+    justify-content: center;
+    width: 50px;
+}

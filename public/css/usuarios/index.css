@@ -1,0 +1,19 @@
+#tabla-usuarios thead tr th {
+    font-size: 12px;
+    text-align: center;
+}
+#tabla-usuarios tbody tr td {
+    font-size: 12px;
+    text-align: center;
+}
+
+.a-usuario {
+    color: #212529;
+    text-decoration: none;
+}
+.container-edit_usuario {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    width: 100%;
+}

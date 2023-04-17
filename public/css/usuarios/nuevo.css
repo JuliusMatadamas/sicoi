@@ -1,0 +1,25 @@
+.a-usuario {
+    color: #212529;
+    text-decoration: none;
+}
+.container {
+    margin-bottom: 80px;
+}
+.form-buttons {
+    float: right;
+}
+@media screen and (min-width: 1201px) {
+    .form-buttons {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .form-buttons {
+        width: 75%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .form-buttons {
+        width: 100%;
+    }
+}

@@ -1,0 +1,53 @@
+#btn-cancelar {
+    display: none;
+}
+#tabla-productos thead tr th {
+    font-size: .85rem;
+    text-align: center;
+}
+#tabla-productos tbody tr td {
+    font-size: .75rem;
+}
+.container-buttons {
+    float: right;
+}
+.input-table {
+    background: transparent;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+.td-actions {
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+}
+/* MEDIA QUERIES */
+@media screen and (min-width: 1201px) {
+    .container-buttons {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .container-buttons {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .container-buttons {
+        width: 75%;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .container-buttons {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 575px) {
+    .container-buttons {
+        width: 100%;
+    }
+}

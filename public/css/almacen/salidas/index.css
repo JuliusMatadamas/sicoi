@@ -1,0 +1,83 @@
+input:disabled {
+    background-color: #f5f5f5;
+}
+
+select:disabled {
+    background-color: #f5f5f5;
+}
+
+.action-table {
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+    font-size: .75rem;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.btn:disabled {
+    opacity: .3;
+}
+
+.card {
+    margin-bottom: 50px;
+}
+
+.container-form_card {
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.container-form_card-header {
+    background: #f5f5f5;
+    border-bottom: 1px solid #b7b7b7;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.container-form_card-body {
+    height: 0;
+    overflow: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.container-table {
+    overflow: auto;
+}
+
+.input-table {
+    background: transparent;
+    border: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+#foi-tabla_productos {
+    min-width: 380px;
+}
+
+#foi-tabla_productos thead th {
+    font-size: .8rem;
+    text-align: center;
+}
+
+#foi-tabla_productos thead th:nth-child(1) {
+    min-width: 115px;
+}
+
+#foi-tabla_productos thead th:nth-child(2) {
+    min-width: 80px;
+}
+
+#foi-tabla_productos thead th:nth-child(3) {
+    min-width: 85px;
+}
+
+#foi-tabla_productos thead th:nth-child(4) {
+    min-width: 100px;
+}

@@ -1,0 +1,30 @@
+#tabla-entradas thead tr th {
+    font-size: .85rem;
+    text-align: center;
+}
+
+#tabla-entradas tbody tr td {
+    font-size: .75rem;
+}
+
+.card {
+    margin-bottom: 80px;
+}
+
+.container-buttons {
+    float: right;
+}
+
+.input-table {
+    background: transparent;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.td-actions {
+    text-align: center;
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="dpt-sicoi.atwebpages.com" id="88a41224-3f07-4998-9441-d6ca94503280" port="221" nameFormat="DESCRIPTIVE" username="4246749" useOpenSSHConfig="true" />
+    </configs>
+  </component>
+</project>

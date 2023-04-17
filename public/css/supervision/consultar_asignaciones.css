@@ -1,0 +1,81 @@
+/* ID's */
+#tabla-visitas thead tr th {
+    font-size: .75rem;
+}
+
+#tabla-visitas tbody tr td {
+    font-size: .65rem;
+}
+
+#table-to_export-container {
+    display: none;
+}
+
+/* CLASS's */
+.arrow-down i {
+    position: absolute;
+    top: 17px;
+}
+
+.input-table {
+    background: transparent;
+    border: none;
+    font-size: .7rem;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.td-actions {
+    cursor: pointer;
+    font-size: .7rem;
+    text-align: center;
+    width: 100%;
+}
+
+/* HTML Elements */
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 1201px) {
+    .arrow-down i {
+        left: 22%;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .arrow-down i {
+        left: 20%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .arrow-down i {
+        left: 21%;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .arrow-down i {
+        left: 28%;
+    }
+}
+
+@media screen and (max-width: 575px) {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

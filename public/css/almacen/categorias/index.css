@@ -1,0 +1,15 @@
+#btn-cancelar {
+    display: none;
+}
+#tabla-categorias thead tr th {
+    font-size: .85rem;
+    text-align: center;
+}
+#tabla-categorias tbody tr td {
+    font-size: .75rem;
+}
+.td-actions {
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+}

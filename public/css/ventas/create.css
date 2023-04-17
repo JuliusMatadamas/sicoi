@@ -1,0 +1,44 @@
+.card {
+    margin-bottom: 80px;
+}
+.form-buttons {
+    float: right;
+}
+.link-venta:nth-child(1) {
+    text-align: start;
+}
+.link-venta:nth-child(2) {
+    text-align: center;
+}
+.link-venta:nth-child(3) {
+    text-align: end;
+}
+.link-venta a {
+    color: #212529;
+    font-size: .85rem;
+    text-decoration: none;
+}
+.link-venta a h3 i {
+    margin-right: 10px;
+}
+@media screen and (min-width: 1201px) {
+    .form-buttons {
+        width: 40%;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .form-buttons {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 575px) {
+    .link-venta:nth-child(1) {
+        text-align: center;
+    }
+    .link-venta:nth-child(2) {
+        text-align: center;
+    }
+    .link-venta:nth-child(3) {
+        text-align: center;
+    }
+}

@@ -1,0 +1,37 @@
+.a-vacacion {
+    color: #212529;
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+#modal-vacaciones_message .card {
+    max-width: 80%;
+}
+
+@media screen and (min-width: 1201px) {
+    button {
+        width: 200px !important;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    button {
+        width: 240px !important;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    button {
+        width: 300px !important;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    button {
+        width: 50% !important;
+    }
+}
+@media screen and (max-width: 575px) {
+    button {
+        width: 100% !important;
+    }
+}

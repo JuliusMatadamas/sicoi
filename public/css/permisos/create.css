@@ -1,0 +1,18 @@
+a {
+    text-decoration: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.a-permiso {
+    color: #212529;
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.container .card {
+    margin-bottom: 80px;
+}

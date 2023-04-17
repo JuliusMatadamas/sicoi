@@ -1,0 +1,33 @@
+body {
+    font-weight: 400;
+}
+
+form p {
+    font-size: .8rem;
+    font-weight: 400;
+}
+
+form label {
+    font-weight: bold;
+}
+
+.container-login {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+.container-login .card {
+    max-width: 420px;
+    width: 90%;
+}
+#usuario, #password {
+    text-align: center;
+}
+
+
+@media screen and (max-width: 575px) {
+    #usuario, #password {
+        width: 100%;
+    }
+}

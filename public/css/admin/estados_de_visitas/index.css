@@ -1,0 +1,15 @@
+
+#btn-cancelar {
+    display: none;
+}
+#tabla-estados_de_visitas thead tr th {
+    font-size: 12px;
+    text-align: center;
+}
+#tabla-estados_de_visitas tbody tr td {
+    font-size: 12px;
+    text-align: center;
+}
+.container-td {
+    cursor: pointer;
+}

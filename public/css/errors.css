@@ -1,0 +1,11 @@
+.container-error {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+.container-error .card {
+    margin: auto;
+    max-width: 420px;
+    width: 90%;
+}

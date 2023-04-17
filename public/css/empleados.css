@@ -1,0 +1,73 @@
+/* ========== ELEMENTOS HTML ========== */
+a {
+    color: #212529;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+/* ========== ID's ========== */
+#btn-remove-img {
+    display: none;
+}
+
+#tabla-empleados thead tr th {
+    font-size: 12px;
+}
+
+#tabla-empleados tbody tr td {
+    font-size: 12px;
+}
+
+
+/* ========== CLASES ========== */
+.a-empleado {
+    color: #212529;
+    text-decoration: none;
+}
+.closeview-profile_img {
+    background: #fff;
+    border: solid 3px #333;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0 10px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+}
+.container .card {
+    margin-bottom: 80px !important;
+}
+.container-edit_empleado:hover {
+    cursor: pointer;
+}
+.container-profile_img img {
+    border: solid 1px #ccc;
+    border-radius: 10px;
+}
+.info-profile_img {
+    font-size: .75rem;
+    line-height: 0;
+}
+.view-profile_img {
+    position: relative;
+    text-align: center;
+}
+.view-profile_img div {
+    align-items: center;
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    display: flex;
+    font-size: .75rem;
+    height: 240px;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+.view-profile_img img {
+    border: solid 1px #ccc;
+    border-radius: 10px;
+    height: auto;
+    width: 100%;
+}

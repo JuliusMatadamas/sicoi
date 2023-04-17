@@ -1,0 +1,29 @@
+input::placeholder {
+    font-size: .90rem;
+}
+.a-cliente {
+    color: #212529;
+    text-decoration: none;
+}
+.card {
+    margin-bottom: 60px;
+}
+.form-buttons {
+    float: right;
+}
+@media screen and (min-width: 1201px) {
+    .form-buttons {
+        width: 40%;
+    }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .form-buttons {
+        width: 50%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+}
+@media screen and (max-width: 575px) {
+}

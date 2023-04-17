@@ -1,0 +1,70 @@
+hr {
+    border: solid .01rem #f5f5f5;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+#tabla-mi_inventario thead tr th {
+    font-size: .85rem;
+    text-align: center;
+}
+
+#tabla-mi_inventario tbody tr td {
+    font-size: .75rem;
+}
+
+.card {
+    margin-bottom: 80px;
+}
+
+.col-label {
+    background-color: #f5f5f5;
+}
+
+.col-input {
+    border-bottom: 1px solid #f5f5f5;
+    border-left: 0px;
+    border-right: 1px solid #f5f5f5;
+    border-top: 1px solid #f5f5f5;
+    height: 45px;
+    padding: 0;
+}
+
+.container-buttons {
+    float: right;
+}
+
+.input-inventario {
+    background: transparent;
+    border: none;
+    height: 100%;
+    padding-left: 10px;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.input-label {
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    height: 100%;
+    outline: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+@media (max-width: 575px) {
+    .input-select {
+        border-left: 1px solid #f5f5f5;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .input-select {
+        border-left: 1px solid #f5f5f5;
+    }
+}

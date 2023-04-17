@@ -1,0 +1,25 @@
+#tableContainer {
+    overflow: auto;
+}
+#tableContainer > .dt-wrapper {
+    min-width: 500px;
+}
+#tabla-puestos thead tr th {
+    font-size: 12px;
+    text-align: center;
+}
+#tabla-puestos tbody tr td {
+    font-size: 12px;
+    text-align: center;
+}
+.container-edit_puesto {
+    cursor: pointer;
+    margin: auto;
+    max-width: 100px;
+    text-align: center;
+    width: 100%;
+}
+
+#btn-cancelar {
+    display: none;
+}

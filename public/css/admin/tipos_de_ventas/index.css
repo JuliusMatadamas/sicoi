@@ -1,0 +1,15 @@
+
+#btn-cancelar {
+    display: none;
+}
+#tabla-tipos_de_ventas thead tr th {
+    font-size: 12px;
+    text-align: center;
+}
+#tabla-tipos_de_ventas tbody tr td {
+    font-size: 12px;
+    text-align: center;
+}
+.container-td {
+    cursor: pointer;
+}

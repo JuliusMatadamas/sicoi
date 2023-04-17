@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e2152196-7856-4b0b-afa9-990891a68b38" name="dpt-sicoi" url="http://dpt-sicoi.atwebpages.com/">
+        <fileTransfer accessType="SFTP" host="dpt-sicoi.atwebpages.com" port="221" sshConfigId="88a41224-3f07-4998-9441-d6ca94503280" sshConfig="4246749@dpt-sicoi.atwebpages.com:221 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="94185db9-ec22-4838-bd81-e4a062f9e114" name="juliomatadamas.com" url="http://ftp.juliomatadamas.com">
+        <fileTransfer rootFolder="/public_html" host="ftp.juliomatadamas.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

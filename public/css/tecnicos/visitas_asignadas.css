@@ -1,0 +1,77 @@
+.card {
+    margin-bottom: 80px;
+}
+
+.mb {
+    margin-bottom: 30px;
+}
+
+.tel a {
+    color: #212529;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+
+.visita {
+    border: solid 1px #f5f5f5;
+}
+
+.visita > a {
+    background-color: #323539;
+    border-bottom: solid 1px #ccc;
+    color: #fff;
+    display: block;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+}
+
+.visita a span span:nth-child(2) {
+    text-align: end;
+}
+
+.visita .detail {
+    height: 0px;
+    overflow: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.visita:target .detail {
+    height: 300px;
+}
+
+@media screen and (min-width: 1201px) {
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .visita a span span:nth-child(1) {
+        text-align: start;
+    }
+
+    .visita a span span:nth-child(2) {
+        text-align: end;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+    .visita a span span:nth-child(1) {
+        text-align: center;
+    }
+
+    .visita a span span:nth-child(2) {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .visita a span span:nth-child(1) {
+        text-align: center;
+    }
+
+    .visita a span span:nth-child(2) {
+        text-align: center;
+    }
+}

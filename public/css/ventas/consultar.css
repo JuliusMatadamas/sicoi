@@ -1,0 +1,45 @@
+.card {
+    margin-bottom: 80px;
+}
+.link-venta:nth-child(1) {
+    text-align: start;
+}
+.link-venta:nth-child(2) {
+    text-align: center;
+}
+.link-venta:nth-child(3) {
+    text-align: end;
+}
+.link-venta a {
+    color: #212529;
+    font-size: .85rem;
+    text-decoration: none;
+}
+.input-table {
+    background: transparent;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+.td-actions {
+    cursor: pointer;
+}
+#tabla-ventas thead tr th {
+    font-size: 12px;
+    text-align: center;
+}
+#tabla-ventas tbody tr td {
+    font-size: 12px;
+    text-align: center;
+}
+#tabla-ventas tbody tr td input {
+    background: transparent;
+    border: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}

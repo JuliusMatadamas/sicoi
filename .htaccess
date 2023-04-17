@@ -1,0 +1,10 @@
+# Instrucciones al servidor Apache para indicarle como tratar al archivo index y las peticiones
+# Todas las peticiones http pasarán solamente por el archivo index
+# La URL contendrá un parámetro llamado URI que será un string del tipo 'controlador/metodo/123'
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    Header set Access-Control-Allow-Origin "*"
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.+)$ index.php?uri=$1 [QSA,L]
+</IfModule>

@@ -1,0 +1,47 @@
+small {
+    font-size: .7rem;
+}
+
+.a-visita {
+    color: #212529;
+    text-decoration: none;
+}
+
+.card {
+    margin-bottom: 60px;
+}
+
+.tels {
+    text-align: center;
+}
+
+.tels a {
+    color: #212529;
+    display: block;
+    text-decoration: none;
+}
+
+#fecha_programada-feedback, #observaciones_reprogramacion-feedback {
+    font-size: .75rem;
+}
+
+#form-registrar_visita, #form-reprogramacion, #form-no_encontrado {
+    height: 0;
+    overflow: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+@media screen and (min-width: 1201px) {
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+}
+
+@media screen and (max-width: 575px) {
+}

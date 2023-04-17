@@ -1,0 +1,25 @@
+#form-validate_vacaciones section {
+    display: block;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    width: 100%;
+}
+#form-validate_vacaciones section table thead tr th {
+    font-size: .8rem;
+}
+
+#form-validate_vacaciones section table tbody tr td {
+    font-size: .75rem;
+}
+
+.alert-validation {
+    color: #ff0000;
+    display: none;
+}
+
+.select-vacacion {
+    background: transparent;
+    border: none;
+    width: 100%;
+}

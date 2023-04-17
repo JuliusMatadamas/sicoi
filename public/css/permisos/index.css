@@ -1,0 +1,44 @@
+a {
+    text-decoration: none;
+}
+
+
+
+.a-permiso {
+    color: #212529;
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.container .card {
+    margin-bottom: 80px;
+}
+
+.container-td {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container-td i {
+    margin-right: 15px;
+}
+.permiso-td_input {
+    background: transparent;
+    border: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+#tabla-permisos thead tr th {
+    font-size: 12px;
+    text-align: center;
+}
+#tabla-permisos tbody tr td {
+    font-size: 12px;
+    text-align: center;
+}

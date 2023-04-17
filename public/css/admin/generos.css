@@ -1,0 +1,26 @@
+#tableContainer {
+    overflow: auto;
+}
+#tableContainer > .dt-wrapper {
+    min-width: 500px;
+}
+#tabla-generos thead tr th {
+    font-size: 12px;
+    text-align: center;
+}
+#tabla-generos tbody tr td {
+    font-size: 12px;
+    text-align: center;
+}
+
+.container-edit_genero {
+    cursor: pointer;
+    margin: auto;
+    max-width: 100px;
+    text-align: center;
+    width: 100%;
+}
+
+#btn-cancelar {
+    display: none;
+}
