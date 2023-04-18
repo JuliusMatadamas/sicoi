@@ -74,7 +74,8 @@
                             <?php
                             $cont = 1;
                             foreach ($data["vendedores"] as $vendedor) {
-                                ?><li id="<?php echo $cont; ?>" class="item" onclick="addToList(this)">
+                            ?>
+                            <li id="<?php echo $cont; ?>" class="item" onclick="addToList(this)">
                                 <span id="<?php echo $vendedor["id_vendedor"]; ?>" class="checkbox">
                                     <i class="fa-solid fa-check check-icon"></i>
                                 </span>
@@ -86,9 +87,10 @@
                             ?><!-- items -->
                         </ul>
                     </div>
-                    <small>Si no se selecciona por lo menos un vendedor, se mostrarán las ventas de todos los vendedores.</small>
+                    <small>Si no se selecciona por lo menos un vendedor, se mostrarán las ventas de todos los
+                        vendedores.</small>
                 </div>
-                
+
                 <div class="col-6 col-lg-8 col-md-12 col-sm-12 col-xs-12">
                     <label for="tipos_de_ventas">Tipo de venta</label>
                     <div id="tipos_de_ventas" class="container-select-multiple">
@@ -109,7 +111,8 @@
                             <?php
                             $cont = 1;
                             foreach ($data["tipos_de_ventas"] as $tipoDeVenta) {
-                            ?><li id="<?php echo $cont; ?>" class="item" onclick="addToList(this)">
+                            ?>
+                            <li id="<?php echo $cont; ?>" class="item" onclick="addToList(this)">
                                 <span id="<?php echo $tipoDeVenta["id_tipo_de_venta"]; ?>" class="checkbox">
                                     <i class="fa-solid fa-check check-icon"></i>
                                 </span>
@@ -121,58 +124,40 @@
                             ?><!-- items -->
                         </ul>
                     </div>
-                    <small>Si no se selecciona por lo menos un tipo de venta, se mostrarán todas las ventas de todos los tipos.</small>
+                    <small>Si no se selecciona por lo menos un tipo de venta, se mostrarán todas las ventas de todos los
+                        tipos.</small>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <label for="fecha_inicio">Entre la fecha:</label>
-                    <input type="date" id="fecha_inicio" class="form-control" min="<?php echo $data["fecha_inicio"]; ?>" max="<?php echo $data["fecha_termino"]; ?>" value="<?php echo $data["fecha_inicio"]; ?>">
+                    <input type="date" id="fecha_inicio" class="form-control" min="<?php echo $data["fecha_inicio"]; ?>"
+                           max="<?php echo $data["fecha_termino"]; ?>" value="<?php echo $data["fecha_inicio"]; ?>">
                 </div>
 
                 <div class="col-2 col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <label for="fecha_termino">Y la fecha:</label>
-                    <input type="date" id="fecha_termino" class="form-control" min="<?php echo $data["fecha_inicio"]; ?>" max="<?php echo $data["fecha_termino"]; ?>" value="<?php echo $data["fecha_termino"]; ?>">
+                    <input type="date" id="fecha_termino" class="form-control"
+                           min="<?php echo $data["fecha_inicio"]; ?>" max="<?php echo $data["fecha_termino"]; ?>"
+                           value="<?php echo $data["fecha_termino"]; ?>">
                 </div>
             </div>
 
-            <small>Solo se podrán seleccionar fechas entre la fecha actual y la fecha <?php echo $data["fecha_inicio"]; ?> que es donde se comenzó a registrar las ventas en este sistema.</small>
+            <small>Solo se podrán seleccionar fechas entre la fecha actual y la
+                fecha <?php echo $data["fecha_inicio"]; ?> que es donde se comenzó a registrar las ventas en este
+                sistema.</small>
 
             <div class="row">
                 <div class="col-12 text-end">
-                    <input id="btn-mostrar" type="button" class="btn btn-dark w-xl-25 w-lg-25 w-md-50 w-sm-100 w-xs-100" value="Mostrar">
+                    <input id="btn-mostrar" type="button" class="btn btn-dark w-xl-25 w-lg-25 w-md-50 w-sm-100 w-xs-100"
+                           value="Mostrar">
                 </div>
             </div>
 
             <br>
 
             <div id="table-container">
-                <hr>
-                <br>
-                <div id="export-button" class="text-end">
-                    <button class="btn btn-success" onclick="exportTableToExcel()">
-                        <i class="fa-regular fa-file-excel"></i>
-                        <span>Exportar a excel</span>
-                    </button>
-                </div>
-                <table id="tabla-reportes" class="table table-light table-bordered table-striped table-hover">
-                    <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Vendedor</th>
-                        <th>Cliente</th>
-                        <th>Fecha venta</th>
-                        <th>Tipo</th>
-                        <th>Fecha programada</th>
-                        <th>Fecha visita</th>
-                        <th>Hora visita</th>
-                        <th>Status</th>
-                    </tr>
-                    </thead>
-                    <tbody id="tBodyReport">
-                    </tbody>
-                </table>
             </div>
 
             <div id="table-to_export-container">
@@ -197,7 +182,9 @@
 
             <div id="error-container">
                 <i class="fa-solid fa-triangle-exclamation"></i>
-                <p id="error-message"></p>
+                <p id="error-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam assumenda cum
+                    debitis, dolorem doloremque enim eum explicabo impedit iste nam nobis numquam odio quam quo saepe
+                    sequi totam vel, voluptatem?</p>
             </div>
         </section>
     </div>

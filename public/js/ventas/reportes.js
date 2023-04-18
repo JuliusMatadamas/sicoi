@@ -3,8 +3,8 @@ let csrf = document.querySelector("#csrf");
 let idUsuario = document.querySelector("#id_usuario");
 let btnMostrar = document.querySelector("#btn-mostrar");
 let tableContainer = document.querySelector("#table-container");
-let dataTable = document.querySelector("#tabla-reportes");
-let tBodyReport = document.querySelector("#tBodyReport");
+// let dataTable = document.querySelector("#tabla-reportes");
+// let tBodyReport = document.querySelector("#tBodyReport");
 let tBodyToExport = document.querySelector("#tBodyToExport");
 let infoTableToExport;
 
@@ -21,13 +21,13 @@ function addToList(e) {
         e.classList.toggle("checked");
         if (e.classList.contains("checked")) {
             items.forEach(item => {
-                if (parseInt(item.getAttribute("id")) !== 0){
+                if (parseInt(item.getAttribute("id")) !== 0) {
                     item.classList.add("checked");
                 }
             });
         } else {
             items.forEach(item => {
-                if (parseInt(item.getAttribute("id")) !== 0){
+                if (parseInt(item.getAttribute("id")) !== 0) {
                     item.classList.remove("checked");
                 }
             });
@@ -43,7 +43,7 @@ function addToList(e) {
             }
         } else {
             items.forEach(item => {
-                if (parseInt(item.getAttribute("id")) === 0){
+                if (parseInt(item.getAttribute("id")) === 0) {
                     item.classList.remove("checked");
                 }
             });
@@ -91,14 +91,14 @@ btnMostrar.addEventListener("click", () => {
         fechaInicio.value = fechaInicioDefault.value;
     }
 
-    if (!esFechaValida(fechaInicio.value)){
+    if (!esFechaValida(fechaInicio.value)) {
         fechaInicio.value = fechaInicioDefault.value;
     }
 
     let d1 = new Date(fechaInicio.value);
     let d2 = new Date(fechaInicioDefault.value);
 
-    if(Date.parse(d1) < Date.parse(d2)) {
+    if (Date.parse(d1) < Date.parse(d2)) {
         fechaInicio.value = fechaInicioDefault.value;
     }
 
@@ -106,21 +106,21 @@ btnMostrar.addEventListener("click", () => {
         fechaTermino.value = fechaTerminoDefault.value;
     }
 
-    if (!esFechaValida(fechaTermino.value)){
+    if (!esFechaValida(fechaTermino.value)) {
         fechaTermino.value = fechaTerminoDefault.value;
     }
 
     d1 = new Date(fechaTermino.value);
     d2 = new Date(fechaTerminoDefault.value);
 
-    if(Date.parse(d1) > Date.parse(d2)) {
+    if (Date.parse(d1) > Date.parse(d2)) {
         fechaTermino.value = fechaTerminoDefault.value;
     }
 
     d1 = new Date(fechaInicio.value);
     d2 = new Date(fechaTermino.value);
 
-    if(Date.parse(d1) > Date.parse(d2)) {
+    if (Date.parse(d1) > Date.parse(d2)) {
         fechaInicio.value = fechaTermino.value;
     }
 
@@ -151,9 +151,66 @@ btnMostrar.addEventListener("click", () => {
                     let ventas = JSON.parse(response.data);
                     infoTableToExport = ventas;
                     let cont = 1;
-                    while(tBodyReport.hasChildNodes()) {
-                        tBodyReport.removeChild(tBodyReport.firstChild);
-                    }
+
+                    tableContainer.innerHTML = '';
+                    let hr = document.createElement("hr");
+                    tableContainer.appendChild(hr);
+                    let br = document.createElement("br");
+                    tableContainer.appendChild(br);
+                    let div = document.createElement("div");
+                    div.setAttribute("id", "export-button");
+                    div.setAttribute("class", "text-end");
+                    let button = document.createElement("button");
+                    button.setAttribute("class", "btn btn-success");
+                    button.setAttribute("onclick", "exportTableToExcel()");
+                    let i = document.createElement("i");
+                    i.setAttribute("class", "fa-regular fa-file-excel");
+                    button.appendChild(i);
+                    let span = document.createElement("span");
+                    span.innerText = "Exportar a Excel";
+                    button.appendChild(span);
+                    div.appendChild(button);
+                    tableContainer.appendChild(div);
+
+                    let dataTable = document.createElement("table");
+                    dataTable.setAttribute("id", "tabla-reportes");
+                    dataTable.setAttribute("class", "table table-light table-bordered table-striped table-hover");
+
+                    let tHead = document.createElement("thead");
+
+                    let tr = document.createElement("tr");
+                    let th1 = document.createElement("th");
+                    th1.innerHTML = "#";
+                    tr.appendChild(th1);
+                    let th2 = document.createElement("th");
+                    th2.innerHTML = "Vendedor";
+                    tr.appendChild(th2);
+                    let th3 = document.createElement("th");
+                    th3.innerHTML = "Cliente";
+                    tr.appendChild(th3);
+                    let th4 = document.createElement("th");
+                    th4.innerHTML = "Fecha Venta";
+                    tr.appendChild(th4);
+                    let th5 = document.createElement("th");
+                    th5.innerHTML = "Tipo";
+                    tr.appendChild(th5);
+                    let th6 = document.createElement("th");
+                    th6.innerHTML = "Fecha Programada";
+                    tr.appendChild(th6);
+                    let th7 = document.createElement("th");
+                    th7.innerHTML = "Fecha Visita";
+                    tr.appendChild(th7);
+                    let th8 = document.createElement("th");
+                    th8.innerHTML = "Hora Visita";
+                    tr.appendChild(th8);
+                    let th9 = document.createElement("th");
+                    th9.innerHTML = "Status";
+                    tr.appendChild(th9);
+
+                    tHead.appendChild(tr);
+                    dataTable.appendChild(tHead);
+
+                    let tBodyReport = document.createElement("tbody");
                     ventas.forEach(venta => {
                         let tr = document.createElement("tr");
                         let td1 = document.createElement("td");
@@ -186,9 +243,10 @@ btnMostrar.addEventListener("click", () => {
                         tBodyReport.appendChild(tr);
                         cont++;
                     });
+                    dataTable.appendChild(tBodyReport);
+                    tableContainer.appendChild(dataTable);
                     tableContainer.style.display = "block";
-                    new JSTable(dataTable, {
-                    });
+                    new JSTable(dataTable, {});
                 }
 
                 if (xhttp.status === 400) {
@@ -207,7 +265,7 @@ btnMostrar.addEventListener("click", () => {
 function exportTableToExcel() {
     let table = document.querySelector("#tabla-to-export");
     let cont = 1;
-    while(tBodyToExport.hasChildNodes()) {
+    while (tBodyToExport.hasChildNodes()) {
         tBodyToExport.removeChild(tBodyToExport.firstChild);
     }
     infoTableToExport.forEach(venta => {
@@ -242,5 +300,5 @@ function exportTableToExcel() {
         tBodyToExport.appendChild(tr);
         cont++;
     });
-    TableToExcel.convert(table, {name: `reporte_ventas.xlsx`, sheet: { name: 'reporte_ventas'} });
+    TableToExcel.convert(table, {name: `reporte_ventas.xlsx`, sheet: {name: 'reporte_ventas'}});
 }

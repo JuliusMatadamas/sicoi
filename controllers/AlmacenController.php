@@ -240,9 +240,22 @@ class AlmacenController extends Controller
 
     public function reportes()
     {
-        $css = '';
-        $js = '';
-        $data = [];
+        // CSS
+        $css = '<link rel="stylesheet" href="' . ENTORNO . '/public/css/jstable.css">' . PHP_EOL;
+        $css .= '<link rel="stylesheet" href="' . ENTORNO . '/public/css/almacen/reportes/index.css">' . PHP_EOL;
+
+        // JS
+        $js = '<script src="' . ENTORNO . '/public/js/tableToExcel.js"></script>' . PHP_EOL;
+        $js .= '<script src="' . ENTORNO . '/public/js/jstable.min.js"></script>' . PHP_EOL;
+        $js .= '<script src="' . ENTORNO . '/public/js/almacen/reportes/index.js"></script>' . PHP_EOL;
+
+        // DATA
+        $inventario = new Inventario();
+
+        $query = "SELECT organizaciones.id AS 'id', CONCAT(organizaciones.organizacion, ' - ', organizaciones.descripcion) AS 'organizacion' FROM organizaciones WHERE organizaciones.deleted_at IS NULL UNION SELECT usuarios.id AS 'id', CONCAT(empleados.nombre, ' ', empleados.apellido_paterno) AS 'organizacion' FROM empleados INNER JOIN usuarios ON empleados.id = usuarios.id INNER JOIN puestos ON empleados.id_puesto = puestos.id WHERE usuarios.deleted_at IS NULL AND puestos.id = 8";
+        $data["organizaciones"] = $inventario->customQuery($query);
+
+        // VIEW
         return $this->render('almacen/reportes/index', $css, $js, $data);
     }
 

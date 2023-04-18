@@ -14,6 +14,7 @@ use app\controllers\AdminPermisoController;
 use app\controllers\AdminReporteController;
 use app\controllers\AdminVacacionController;
 use app\controllers\AlmacenController;
+use app\controllers\api\ApiAlmacenController;
 use app\controllers\api\ApiCategoriaController;
 use app\controllers\api\ApiClienteController;
 use app\controllers\api\ApiColoniaController;
@@ -269,6 +270,8 @@ $app->router->get('api/ventas_por_asignar', [ApiVentasPorAsignarController::clas
 $app->router->get('api/visitas_asignadas', [ApiVisitasAsignadasController::class, 'index']);
 $app->router->post('api/validar_serie_salida', [ApiValidarSerieSalidaController::class, 'index']);
 $app->router->post('api/tecnicos/obtener_entradas', [ApiTecnicoController::class, 'obtener_entradas']);
+$app->router->post('api/almacen/reporte_por_organizacion', [ApiAlmacenController::class, 'reportePorOrganizacion']);
+$app->router->post('api/almacen/reporte_por_serie', [ApiAlmacenController::class, 'reportePorSerie']);
 
 /** 00003 - SE ARRANCA LA APLICACIÓN */
 $app->run();
