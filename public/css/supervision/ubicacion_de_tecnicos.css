@@ -1,0 +1,36 @@
+#map {
+    align-items: center;
+    border: solid 1px #dee2e6;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    min-height: 500px;
+    width: 100%;
+}
+
+#sin_resultados {
+    display: none;
+}
+
+#tabla-ubicaciones thead tr th {
+    font-size: .85rem;
+    text-align: center;
+}
+
+#tabla-ubicaciones tbody tr td {
+    font-size: .75rem;
+}
+
+.card {
+    margin-bottom: 80px;
+}
+
+.input-table {
+    background: transparent;
+    border: none;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}

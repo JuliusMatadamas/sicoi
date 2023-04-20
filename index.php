@@ -29,6 +29,7 @@ use app\controllers\api\ApiProductoController;
 use app\controllers\api\ApiProductoPorCategoriaController;
 use app\controllers\api\ApiProductoPorCategoriaSalidaController;
 use app\controllers\api\ApiPuestoController;
+use app\controllers\api\ApiSupervisionController;
 use app\controllers\api\ApiTecnicoController;
 use app\controllers\api\ApiTipoDeVentaController;
 use app\controllers\api\ApiUsuarioController;
@@ -272,6 +273,7 @@ $app->router->post('api/validar_serie_salida', [ApiValidarSerieSalidaController:
 $app->router->post('api/tecnicos/obtener_entradas', [ApiTecnicoController::class, 'obtener_entradas']);
 $app->router->post('api/almacen/reporte_por_organizacion', [ApiAlmacenController::class, 'reportePorOrganizacion']);
 $app->router->post('api/almacen/reporte_por_serie', [ApiAlmacenController::class, 'reportePorSerie']);
+$app->router->post('api/supervision/ubicacion_de_tecnicos', [ApiSupervisionController::class, 'ubicacionDeTecnicos']);
 
 /** 00003 - SE ARRANCA LA APLICACIÓN */
 $app->run();

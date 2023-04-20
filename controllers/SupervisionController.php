@@ -234,9 +234,25 @@ class SupervisionController extends Controller
 
     public function ubicacion_de_tecnicos()
     {
-        $css = '';
-        $js = '';
-        $data = [];
+        // CSS
+        $css = '<link rel="stylesheet" href="' . ENTORNO . '/public/css/supervision/ubicacion_de_tecnicos.css">' . PHP_EOL;
+
+        // JS
+        $js = '<script src="' . ENTORNO . '/public/js/supervision/ubicacion_de_tecnicos.js"></script>' . PHP_EOL;
+        $js .= '<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlEkZjkKQU93koBHdMWSyKxdYAqedosY4&callback=initMap"></script>' . PHP_EOL;
+
+        // DATA
+        $ventas = new Venta();
+
+        $query = "SELECT MIN(ventas.fecha_visita) AS 'fecha_min' FROM ventas";
+
+        $data["fecha_min"] = $ventas->customQuery($query)[0]["fecha_min"];
+        $data["fecha_max"] = date("Y-m-d");
+
+        $query = "SELECT ventas.id_tecnico_visito AS 'id_tecnico', CONCAT(empleados.nombre,' ',empleados.apellido_paterno) AS 'tecnico' FROM ventas INNER JOIN usuarios ON ventas.id_tecnico_visito = usuarios.id INNER JOIN empleados ON usuarios.id = empleados.id WHERE ventas.deleted_at IS NULL AND ventas.id_tecnico_visito IS NOT NULL GROUP BY ventas.id_tecnico_visito ORDER BY CONCAT(empleados.nombre,' ',empleados.apellido_paterno) ASC";
+        $data["tecnicos"] = $ventas->customQuery($query);
+
+        // VIEW
         return $this->render('supervision/ubicacion_de_tecnicos', $css, $js, $data);
     }
 

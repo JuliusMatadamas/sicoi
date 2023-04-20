@@ -107,3 +107,10 @@ function asignarFechaActual() {
 
     return year + '-' + month + '-' + day;
 }
+
+function generateRandomHexColor() {
+    // Genera un número hexadecimal de 6 dígitos
+    const hexColor = Math.floor(Math.random() * 16777215).toString(16);
+    // Agrega ceros a la izquierda si es necesario
+    return "#" + "0".repeat(6 - hexColor.length) + hexColor;
+}
